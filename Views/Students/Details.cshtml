@@ -1,0 +1,43 @@
+@model ConsumeStudentsAPI.Models.Student
+
+@{
+  ViewData["Title"] = "Student Details";
+}
+
+<h1>@ViewData["Title"]</h1>
+<div>
+  <hr />
+  <dl class="row">
+    <dt class="col-sm-2">
+        @Html.DisplayNameFor(model => model.studentId)
+    </dt>
+    <dd class="col-sm-10">
+      @Html.DisplayFor(model => model.studentId)
+    </dd>
+
+    <dt class="col-sm-2">
+      @Html.DisplayNameFor(model => model.firstName)
+    </dt>
+    <dd class="col-sm-10">
+      @Html.DisplayFor(model => model.firstName)
+    </dd>
+
+    <dt class="col-sm-2">
+      @Html.DisplayNameFor(model => model.lastName)
+    </dt>
+    <dd class="col-sm-10">
+      @Html.DisplayFor(model => model.lastName)
+    </dd>
+
+    <dt class="col-sm-2">
+          @Html.DisplayNameFor(model => model.school)
+    </dt>
+    <dd class="col-sm-10">
+      @Html.DisplayFor(model => model.school)
+    </dd>
+  </dl>
+</div>
+<div>
+  <a asp-action="Edit" asp-route-id="@Model.studentId" class="btn btn-warning">Edit</a> 
+  <a asp-action="Index" class="btn btn-primary">&lt;&lt; Back to List</a>
+</div>

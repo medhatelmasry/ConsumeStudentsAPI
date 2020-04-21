@@ -1,0 +1,35 @@
+@model ConsumeStudentsAPI.Models.Student
+
+@{
+  ViewData["Title"] = "Edit Student";
+}
+
+<h1>@ViewData["Title"]</h1>
+<hr />
+<div class="row">
+  <div class="col-md-4">
+    <form asp-action="Edit">
+      <div asp-validation-summary="ModelOnly" class="text-danger"></div>
+      <input type="hidden" asp-for="studentId" />
+      <div class="form-group">
+        <label asp-for="firstName" class="control-label"></label>
+        <input asp-for="firstName" class="form-control" />
+        <span asp-validation-for="firstName" class="text-danger"></span>
+      </div>
+      <div class="form-group">
+        <label asp-for="lastName" class="control-label"></label>
+        <input asp-for="lastName" class="form-control" />
+        <span asp-validation-for="lastName" class="text-danger"></span>
+      </div>
+      <div class="form-group">
+        <label asp-for="school" class="control-label"></label>
+        <input asp-for="school" class="form-control" />
+        <span asp-validation-for="school" class="text-danger"></span>
+      </div>            
+      <div class="form-group">
+        <input type="submit" value="Save" class="btn btn-warning" />
+        <a asp-action="Index" class="btn btn-primary">&lt;&lt; Back to List</a>
+      </div>
+    </form>
+  </div>
+</div>
